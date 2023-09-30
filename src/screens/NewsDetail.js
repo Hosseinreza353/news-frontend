@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { Card, Badge, Stack } from "react-bootstrap";
+import { Badge, Stack } from "react-bootstrap";
 
 function NewsDetail({ history }) {
   const { id } = useParams();

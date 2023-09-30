@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'IRANSansWeb';
+    src: local('IRANSansWeb'), url(./fonts/IRANSansWeb.ttf) format('truetype');
+}
+
+* {
+    font-family: IRANSansWeb;
+}
+
 body {
     direction: rtl !important;
+    font-family: IRANSansWeb;
 }

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Card, Badge, Stack } from "react-bootstrap";
+import { Badge, Stack } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 export class News extends Component {
