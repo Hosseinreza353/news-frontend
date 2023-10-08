@@ -25,17 +25,20 @@ export class News extends Component {
             <div className="px-2 py-0 bg-white border-0">
               <Link to={`/news/${news._id}`}>{news.abstract}</Link>
             </div>
-            <div className="px-2 bg-white border-0">
-              <small
-                className="text-muted p-0 text-start"
-              >
-                {news.time}
-              </small>
+            <div
+              className="px-2 bg-white border-0 text-muted ms-1"
+              style={{
+                fontSize: "0.8rem",
+                direction: "ltr",
+                textAlign: "end",
+              }}
+            >
+              {news.time}
             </div>
             <div className="px-2 bg-white border-0">
               <Stack direction="horizontal" gap={2}>
                 {news.keywords.map((kw) => (
-                  <Badge pill bg="primary">
+                  <Badge pill bg="primary" key={kw}>
                     {kw}
                   </Badge>
                 ))}
@@ -49,26 +52,3 @@ export class News extends Component {
 }
 
 export default News;
-
-/*
-<Card>
-  <Card.Header>{news.header}</Card.Header>
-  <Link to={`/news/${news._id}`}>
-    <Card.Img
-      variant="top"
-      className="vh-30"
-      src={news.thumbnail_url}
-    />
-  </Link>
-  <Card.Body>
-    <Card.Text>{news.abstract}</Card.Text>
-    <Stack direction="horizontal" gap={2}>
-      {news.keywords.map((kw) => (
-        <Badge pill bg="primary">
-          {kw}
-        </Badge>
-      ))}
-    </Stack>
-  </Card.Body>
-</Card>
-*/
