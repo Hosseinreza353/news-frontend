@@ -1,5 +1,4 @@
 import axios from "axios";
-import { GET_NEWS, GET_NEWS_DETAIL } from "./types";
 import {
   NEWS_REQ,
   NEWS_SUCC,

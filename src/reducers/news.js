@@ -1,4 +1,3 @@
-import { GET_NEWS, GET_NEWS_DETAIL } from "../actions/types";
 import {
   NEWS_REQ,
   NEWS_SUCC,

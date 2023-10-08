@@ -1,6 +1,4 @@
-export const GET_NEWS = "GET_NEWS";
-export const GET_NEWS_DETAIL = "GET_NEWS_DETAIL";
-
+// fetch news
 export const NEWS_REQ = "NEWS_REQ";
 export const NEWS_SUCC = "NEWS_SUCC";
 export const NEWS_FAIL = "NEWS_FAIL";

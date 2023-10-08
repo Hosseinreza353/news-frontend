@@ -4,7 +4,7 @@ import Header from "../layouts/Header";
 import HomeScreen from "../views/Home";
 import NewsScreen from "../views/Article";
 
-export default function () {
+export default function App() {
   return (
     <Router>
       <Header />

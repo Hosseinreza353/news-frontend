@@ -1,10 +1,11 @@
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Stack } from "react-bootstrap";
 import News from "../components/News";
 import { getNews } from "../actions/news";
 import Paginated from "../components/Paginated";
 import Loader from "../components/Loader";
+import Message from "../components/Message";
 
 function HomeScreen() {
   const [page, setPage] = useState(1);
@@ -12,15 +13,7 @@ function HomeScreen() {
   const dispatch = useDispatch();
   const { news, loading, error } = useSelector((state) => state.news);
 
-  //   const paginate = useCallback(
-  //     (e) => {
-  //       setPage(Number(e.target.text));
-  //     },
-  //     [setPage]
-  //   );
-
   useEffect(() => {
-    // console.log(`page: ${page}`)
     dispatch(getNews(page));
   }, [page, dispatch]);
 

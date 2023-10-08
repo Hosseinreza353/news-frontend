@@ -18,12 +18,10 @@ function ArticleScreen() {
 
   return (
     <>
-      {loading ? (
-        <Loader />
-      ) : error ? (
-        <Message variant="danger">{error}</Message>
-      ) : (
-        <div className="clearfix">
+      {loading && <Loader />}
+      {error && <Message variant="danger">{error}</Message>}
+      {loading === false && (
+        <div className="clearfix pb-5 mb-5">
           <img
             src={article.thumbnail_url}
             className="col-4 float-start mb-3 ms-3"
