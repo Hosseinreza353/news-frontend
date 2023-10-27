@@ -8,7 +8,7 @@ function Sidebar() {
         style={{ minHeight: "100px", display: "block", fontSize: "0.7rem" }}
         className="bg-info border-1 border-top"
       >
-        حسینم
+        اخبار مهم
       </div>
     </Container>
   );
