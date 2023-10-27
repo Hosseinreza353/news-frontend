@@ -1,11 +1,18 @@
 version: '3.9'
 
+networks:
+  news:
+    name: news
+    external: true
+
 services:
   app:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.dev
     image: news-app:1.0
     container_name: news-app-1
     ports:
-      - "8080:80"
+      - "3000:3000"
+    networks:
+      - news

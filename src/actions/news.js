@@ -13,7 +13,7 @@ export const getNews = (page) => async (dispatch) => {
     dispatch({ type: NEWS_REQ });
     // first fiqure what query params should be injected
     const { data } = await axios.get(
-      `http://localhost:8000/news/?page=${page}`
+      `http://localhost:8000/news/?page=${page}`, {headers: {'Access-Control-Allow-Origin': '*'}}
     );
     dispatch({
       type: NEWS_SUCC,
