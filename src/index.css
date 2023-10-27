@@ -11,3 +11,7 @@ body {
     direction: rtl !important;
     font-family: IRANSansWeb;
 }
+
+.my-nav-links {
+    font-size: smaller;
+}

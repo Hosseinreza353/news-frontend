@@ -12,7 +12,8 @@ function Loader() {
                 display: 'block'
             }}
         >
-            <span className='sr-only'>Loading...</span>
+            {/* <span className='sr-only'>Loading...</span> */}
+            .
         </Spinner>
     )
 }
