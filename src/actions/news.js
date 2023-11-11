@@ -13,7 +13,7 @@ export const getNews = (page) => async (dispatch) => {
     dispatch({ type: NEWS_REQ });
     // first fiqure what query params should be injected
     const { data } = await axios.get(
-      `http://localhost:3000/news/?page=${page}`
+      `http://185.110.188.75:8000/news/?page=${page}`
     );
     dispatch({
       type: NEWS_SUCC,
@@ -42,7 +42,7 @@ export const getNews = (page) => async (dispatch) => {
 export const getArticle = (id) => async (dispatch) => {
   try {
     dispatch({ type: ARTICLE_REQ });
-    const { data } = await axios.get(`http://localhost:8000/news/${id}`);
+    const { data } = await axios.get(`http://185.110.188.75:8000/news/${id}`);
     dispatch({
       type: ARTICLE_SUCC,
       payload: data,
