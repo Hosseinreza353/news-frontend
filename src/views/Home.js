@@ -6,6 +6,7 @@ import { getNews } from "../actions/news";
 import Paginated from "../components/Paginated";
 import Loader from "../components/Loader";
 import Message from "../components/Message";
+import Banner from "../components/Banner";
 import Sidebar from "../layouts/Sidebar";
 
 function HomeScreen() {
@@ -21,22 +22,30 @@ function HomeScreen() {
   return (
     <Container fluid>
       <Row>
-        <Col sm={9}>
-          {loading ? (
-            <Loader />
-          ) : error ? (
-            <Message variant="danger">{error}</Message>
-          ) : (
-            <Stack gap={2} className="py-2">
-              {news.map((news) => (
-                <News news={news} key={news._id} />
-              ))}
-              <Paginated setPageCallback={setPage} />
-            </Stack>
-          )}
+        <Col sm={8}>
+          <Row>
+            <Col>
+              <Banner />
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              {loading ? (
+                <Loader />
+              ) : error ? (
+                <Message variant="danger">{error}</Message>
+              ) : (
+                <Stack gap={2} className="py-2">
+                  {news.map((news) => (
+                    <News news={news} key={news._id} />
+                  ))}
+                  <Paginated setPageCallback={setPage} />
+                </Stack>
+              )}
+            </Col>
+          </Row>
         </Col>
-        <Col sm={1}></Col>
-        <Col sm={2}>
+        <Col>
           <Sidebar />
         </Col>
       </Row>

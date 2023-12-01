@@ -12,6 +12,17 @@ body {
     font-family: IRANSansWeb;
 }
 
+.my-nav-brand {
+    font-size: larger;
+    color: white !important;
+}
+
 .my-nav-links {
     font-size: smaller;
+    color: white !important;
+}
+
+.my-caption{
+    width: 100%;
+    background:linear-gradient(rgba(50,50,50,0.5),transparent);
 }
