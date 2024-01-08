@@ -12,6 +12,7 @@ services:
       dockerfile: Dockerfile.dev
     image: news-app:1.0
     container_name: news-app-1
+    restart: always
     ports:
       - "3000:3000"
     networks:
